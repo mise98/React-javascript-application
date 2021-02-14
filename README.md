@@ -6,7 +6,7 @@ After receiving data, app will output values from data fields total_conversation
 
 start date, end date and access token are stored in localStorage so they are already populated if user comes back to app later time.
 
-styles of the app are defined in files styles.css and input_styles.css
+Source code of the app can be found in file app.js and styles of the app are defined in files styles.css and input_styles.css
 
 Pictures of app UI:
 
