@@ -4,7 +4,7 @@ This is React javascript application that takes start date, end date and access 
 
 After receiving data, app will output values from data fields total_conversation_count, total_user_message_count and total_visitor_message_count. App will also make paginated table that shows maximum of 5 items at the time from daily numbers, which can be found from data field by_date. Fields that are in table are conversation_count, missed_chat_count, visitors_with_conversation_count and date. User can also decide from 'chart type' menu does app output table, chart of conversation_count by date, chart of missed_chat_count by date or chart of visitors_with_conversation_count by date.
 
-start date, end date and access token are stored in localStorage so they are already populated if user comes back to app later time.
+Start date, end date and access token are stored in localStorage so they are already populated if user comes back to app later time.
 
 Source code of the app can be found in file app.js and styles of the app are defined in files styles.css and input_styles.css
 
