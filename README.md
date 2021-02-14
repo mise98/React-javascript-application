@@ -8,7 +8,11 @@ start date, end date and access token are stored in localStorage so they are alr
 
 styles of the app are defined in files styles.css and input_styles.css
 
+Pictures of app UI:
 
+![alt text](example1.png)
+
+![alt text](example2.png)
 
 
 
