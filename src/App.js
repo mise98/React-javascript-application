@@ -5,15 +5,15 @@
 /*
 This is React app that gets data from https://api.giosg.com/api/reporting/v1/rooms/84e0fefa-5675-11e7-a349-00163efdd8db/
 chat-stats/daily/?start_date={start}&end_date={end} with HTTP get request to fetch chat counts between 'start date' and
-'end date' given by the user. App takes also 'access token' as a input from the user that will give acces to the data that 
+'end date' given by the user. App takes also 'access token' as a input from the user that will give access to the data that 
 app is trying to get with the HTTP get request.
 
 After receiving data, app will output values from fields total_conversation_count, total_user_message_count
 and total_visitor_message_count. App will also make paginated table that shows maximum of 5 items at 
 time from daily numbers, which can be found from data field by_date. Fields that are in table are 
 conversation_count, missed_chat_count and visitors_with_conversation_count. User can also decide 
-from 'chart type' menu  does app output table, chart of conversation_count by date, missed_chat_count by date
-or visitors_with_conversation_count by date.
+from 'chart type' menu  does app output table, chart of conversation_count by date, chart of missed_chat_count by date
+or chart of visitors_with_conversation_count by date.
 
 start date, end date and token are stored in localStorage so they are already populated if user comes back to app later time.
 
@@ -94,12 +94,14 @@ class App extends Component {
     this.setState({start: e.target.value})
     this.search( e.target.value, this.state.end, this.state.token)
   }
+
   //changes end value for what is given by the user and calls search function with new values
   //this function is called when user changes end date
   onChangeEnd(e){
     this.setState({end: e.target.value})
     this.search(this.state.start, e.target.value, this.state.token)
   }
+
   //changes token value for what is given by the user and calls search function with new values
   //this function is called when user changes access token
   onChangeToken(e){
@@ -120,7 +122,6 @@ class App extends Component {
     this.setState({chart_or_table:false})
     }
 
-  
   // sets chart_or_table to false and tabletype to 2
   // this function is called when missed_chat_count by date is selected from Chart type menu
   handleClick3(){
@@ -134,7 +135,6 @@ class App extends Component {
     this.setState({tabletype: 3})
     this.setState({chart_or_table:false})
   }
-  
   
   componentDidMount(){
 
@@ -181,7 +181,6 @@ class App extends Component {
 
     var options= {}
 
-
     //if data_found is true and chart_or_table is false(chart type is other that table) sets options for CanvasJSChart
     if(data_found && chart_or_table===false){
 
@@ -199,8 +198,6 @@ class App extends Component {
       else{
         title =  "visitors_with_conversation_count"
       }
-
-
    
       var x_y_axis = []
 
@@ -214,7 +211,7 @@ class App extends Component {
  
       }
      
-      //optinons for the CanvasJSChart
+      //options for the CanvasJSChart
       options = {
         animationEnabled: true,
         exportEnabled: true,
@@ -285,7 +282,7 @@ class App extends Component {
             type="text"
             name="token_Box"
             value = {this.state.token}
-            placeholder="Enter acces token here..."
+            placeholder="Enter access token here..."
             onChange = { this.onChangeToken}
             
           />
