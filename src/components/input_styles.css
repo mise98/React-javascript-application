@@ -1,0 +1,50 @@
+.inputs{
+    width:1100px;
+    height: 100px;
+   
+    margin: 20px auto;
+    position: relative;
+
+}
+.start_title{
+    position: absolute;
+    left:0%;
+    bottom:30%;
+    color: black;
+    
+}
+.end_title{
+    position: absolute;
+    left:25%;
+    bottom:30%;
+    color: black;
+    
+}
+.token_title{
+    position: absolute;
+    right:21.2%;
+    bottom:30%;
+    color: black;
+    
+}
+.endDate{
+    position: absolute;
+    bottom:10% ;
+    left:25%;
+    width: 20%;
+    height:30%;
+}
+.startDate{
+    position: absolute;
+    bottom:10% ;
+    left: 0%;
+    width: 20%;
+    height:30%;
+}
+.token{
+    position: absolute;
+    bottom:10% ;
+    right: 0%;
+    width: 29%;
+    height:30%;
+}
